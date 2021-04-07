@@ -1,13 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-const ToDo = (props) => {
-
+function Todo(props) {
     return (
-        <div onClick={() => props.toggle(props.task.id)} className={`todo${props.task.completed ? ' completed' : ''}`}>
-        <p>{props.task}</p>
+        <div>
+            <p style={{textDecoration: props.todo.completed ? 'line-through' : null}} onClick={() => props.toggleCompleted(props.todo.id)}> {props.todo.task}</p>
         </div>
-
     )
 }
 
-export default ToDo
+export default Todo
